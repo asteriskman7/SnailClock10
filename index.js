@@ -35,11 +35,14 @@ function draw() {
     let m = curTime.getSeconds() + s / 1000;
     let h = curTime.getMinutes() + m / 60;
     let d = curTime.getHours() + h / 60;
+    if (d > 12) {
+      d = d - 12;
+    }
 
     let sp = s / 1000;
     let mp = m / 60;
     let hp = h / 60;
-    let dp = d / 24;
+    let dp = d / 12;
     finalsp = sp;
 
     let cx = canvas.width * 0.5;
